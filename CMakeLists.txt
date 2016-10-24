@@ -4,11 +4,18 @@ cmake_minimum_required(VERSION 2.8.12)
 SET (PNAME, KnowledgeBase)
 project(KnowledgeBase)
 
-#set (CMAKE_CXX_FLAGS -std=c++11 )
-#set (CMAKE_CXX_BUILD_DEBUG -Wall -g )
+#Project scope settings
 
 set (ROOT /home/gskaian)
 set(PROOT ${ROOT}/myproject)
+
+set (LIB_DIR ${PROOT}/lib)
+set (BIN_DIR ${PROOT}/bin)
+
+set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${LIB_DIR})
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BIN_DIR})
+set (CMAKE_CXX_FLAGS -std=c++11 )
+set (CMAKE_CXX_BUILD_DEBUG -Wall -g )
 
 include_directories(
   ${PROOT}/include
